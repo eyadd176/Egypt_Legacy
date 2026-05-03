@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGACY OF EGYPT</title>
+    <meta name="keywords" content="ancient egyptian,egypt,history,history of egypt,Egyptian Museum, Grand Egyptian Museum, Abdeen Palace, National Museum, Nubian Museum, Coptic Museum,Mummy, Sarcophagus, Papyrus, Statue, Amulet, Scarab, Hieroglyphs, Gold mask,Tutankhamun, Ramesses II, Cleopatra, Nefertiti, Akhenaten, Hatshepsut, Thutmose,Old Kingdom, New Kingdom, Middle Kingdom, Ptolemaic, Roman Egypt, Islamic Cairo">
+    <meta name="description" content="Explore Egypt's greatest museums and the stories behind them">
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <meta http-equiv="refresh" content="3">  -->
+     
+</head>
+<body>
+
+<header>
+        <nav class="nav">
+            
+            <a href="index.html" class="logo"><h2>EGYPT<span>LEGACY</span></h2></a>
+            <ul>
+             <li >
+                    <a href="index.html">
+                       <span > Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="places.html">
+                        
+                        <span >Museums</span>
+                        
+                    </a>
+                </li>
+                 <li>
+                    <a href="document.html">
+                        <span>Kings</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="gallery.html">
+                        
+                         <span>Gallery</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="book.html">
+                    <span>Browse tickets</span>
+                  </a>
+               </li>
+               <li>
+                  <a href="pay.html">
+                    <span>Buy tickets</span>
+                  </a>
+               </li>
+               
+                <li>
+                    <a href="login.html">
+                        <span>Login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html"> 
+                        
+                          <span> Contact US</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="review.html"> 
+                        
+                            <span>Reviews</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+               <span id="theme-icon">☀️</span>
+            </button>
+        </nav>
+    </header>
+
+<form id="payForm">
+
+<span class="pform-title">Payment</span>
+
+<label>Visitor Type</label>
+<select id="type" onchange="calcPrice(); checkReady()">
+<option value="">Categories</option>
+<option value="egypt">Egyptians</option>
+<option value="arab">Arab</option>
+<option value="foreign">Foreign</option>
+<option value="student">Students</option>
+</select>
+
+
+<label>Place</label>
+<select id="place" onchange="calcPrice(); checkReady()">
+<option value="">Museum</option>
+<option value="0">Egyptian Museum</option>
+<option value="1">Grand Egyptian Museum</option>
+<option value="2">the national Museum of Egyptian civilization</option>
+<option value="3">Luxor Museum</option>
+<option value="4">Nubian Museum</option>
+<option value="5">Hurghada Museum</option>
+<option value="6">Imhotep Museum</option>
+<option value="7">Alex Museum</option>
+</select>
+
+<label>Tickets</label>
+<input type="number" id="count" value="1" min="1" onchange="calcPrice()">
+
+<label>Payment Method</label>
+<select id="method" onchange="togglePayment(); checkReady()">
+<option value="">Payment</option>
+<option value="card">Credit Card</option>
+<option value="vodafone">Vodafone Cash</option>
+<option value="cash">Cash</option>
+</select>
+
+<div id="cardBox" class="payment-box">
+<label>Card Number</label>
+<input type="text" id="card" placeholder="xxxx xxxx xxxx xxxx" oninput="checkReady()">
+
+<label>CVV</label>
+<input type="text" id="cvv" placeholder="xxx" oninput="checkReady()">
+</div>
+
+<div id="vodafoneBox" class="payment-box">
+<label>Phone</label>
+<input type="text" id="phone" placeholder="+20" oninput="checkReady()">
+</div>
+
+<label>Visit Date</label>
+<input type="date" id="visitDate" onchange="checkReady()">
+
+<h2 id="price">Price: 0 EGP</h2>
+
+<button id="payBtn" type="button" onclick="validateForm()" disabled>Pay Now</button>
+<button id="resbtn" type="reset" onclick="resetForm()">Reset</button>
+<br><br>
+<p id="loading">Processing...</p>
+<p class="success" id="msg">✔ Done</p>
+
+</form>
+       <footer class="footer">
+         <p>© 2026 Egypt Legacy. All rights reserved.</p>
+         <p>created by : Abdullah</p> 
+        </footer>
+        <script src="main.js"></script>
+</body>
+</html>

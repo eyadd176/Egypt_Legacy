@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGACY OF EGYPT</title>
+    <meta
+      name="keywords"
+      content="ancient egyptian,egypt,history,history of egypt,Egyptian Museum, Grand Egyptian Museum, Abdeen Palace, National Museum, Nubian Museum, Coptic Museum,Mummy, Sarcophagus, Papyrus, Statue, Amulet, Scarab, Hieroglyphs, Gold mask,Tutankhamun, Ramesses II, Cleopatra, Nefertiti, Akhenaten, Hatshepsut, Thutmose,Old Kingdom, New Kingdom, Middle Kingdom, Ptolemaic, Roman Egypt, Islamic Cairo"
+    />
+    <meta
+      name="description"
+      content="Explore Egypt's greatest museums and the stories behind them"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <meta http-equiv="refresh" content="3">  -->
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a href="index.html" class="logo"
+          ><h2>EGYPT<span>LEGACY</span></h2></a
+        >
+        <ul>
+          <li>
+            <a href="index.html">
+              <span> Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="places.html">
+              <span>Museums</span>
+            </a>
+          </li>
+          <li>
+            <a href="document.html">
+              <span>Kings</span>
+            </a>
+          </li>
+          <li>
+            <a href="gallery.html">
+              <span>Gallery</span>
+            </a>
+          </li>
+          <li>
+            <a href="book.html">
+              <span>Browse tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="pay.html">
+              <span>Buy tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="login.html">
+              <span>Login</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html">
+              <span> Contact US</span>
+            </a>
+          </li>
+          <li>
+                    <a href="review.html"> 
+                        
+                            <span>Reviews</span>
+                    </a>
+                </li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+               <span id="theme-icon">☀️</span>
+            </button>
+      </nav>
+    </header>
+
+    <form id="contactForm" class="cairo">
+      <fieldset class="sphinx">
+        <legend class="nile">Contact Us</legend>
+
+        <label for="name" class="dune">Name:</label>
+        <input type="text" id="name" dir="auto" class="oasis" />
+
+        <label for="email" class="dune">Email:</label>
+        <input type="email" id="email" dir="auto" class="oasis" />
+
+        <p class="ankh">Choose The Reason</p>
+
+        <div class="scarab">
+          <input
+            type="radio"
+            id="Booking"
+            name="Reason"
+            value="Booking"
+            onchange="toggleTextarea()"
+          />
+          <label for="Booking" class="papyrus">Booking Issue</label>
+
+          <input
+            type="radio"
+            id="Payment"
+            name="Reason"
+            value="Payment"
+            onchange="toggleTextarea()"
+          />
+          <label for="Payment" class="papyrus">Payment Issue</label>
+
+          <input
+            type="radio"
+            id="Refund"
+            name="Reason"
+            value="Refund"
+            onchange="toggleTextarea()"
+          />
+          <label for="Refund" class="papyrus">Returns & Refunds</label>
+
+          <input
+            type="radio"
+            id="Bug"
+            name="Reason"
+            value="Bug"
+            onchange="toggleTextarea()"
+          />
+          <label for="Bug" class="papyrus">Report a Bug</label>
+
+          <input
+            type="radio"
+            id="Other"
+            name="Reason"
+            value="Other"
+            onchange="toggleTextarea()"
+          />
+          <label for="Other" class="papyrus">Other</label>
+        </div>
+
+        <textarea
+          id="otherText"
+          class="lotus"
+          dir="auto"
+          disabled
+          placeholder="Please describe your issue..."
+        ></textarea>
+
+        <button class="pharaoh" type="button" onclick="validateForm()">
+          Submit
+        </button>
+      </fieldset>
+    </form>
+
+    
+    <footer class="footer">
+      <p>©️ 2026 Egypt Legacy. All rights reserved.</p>
+      <p>created by : Omar</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+
